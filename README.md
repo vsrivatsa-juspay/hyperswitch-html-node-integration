@@ -1,4 +1,4 @@
-# Accept a Payment
+# Hyperswitch HTML + Node Integration
 
 Build a simple checkout form to collect payment details. Included are some basic
 build and run scripts you can use to start up the application.
@@ -17,4 +17,4 @@ npm install
 npm start
 ~~~
 
-3. Go to [http://localhost:4242/checkout.html](http://localhost:4242/checkout.html)
+3. Go to [http://localhost:4242/index.html](http://localhost:4242/index.html)
