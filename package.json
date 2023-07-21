@@ -8,6 +8,7 @@
   },
   "author": "kritikmodi",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "@juspay-tech/hyperswitch-node": "^1.0.1"
   }
 }
