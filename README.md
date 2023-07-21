@@ -9,7 +9,7 @@ build and run scripts you can use to start up the application.
     - Navigate to `public/script.js` and replace the placeholder `HYPERSWITCH_PUBLISHABLE_KEY` with your publishable key.
     - Navigate to `server.js` and replace the placeholder `HYPERSWITCH_API_KEY` with your API key.
 
-2. Install the dependencies :
+2. Install the dependencies / build the server :
 ~~~
 npm install
 ~~~
@@ -19,4 +19,4 @@ npm install
 npm start
 ~~~
 
-4. The sample app is now accessible here : [http://localhost:4242/index.html](http://localhost:4242/index.html).
+4. The sample app will now be accessible here : [http://localhost:4242/index.html](http://localhost:4242/index.html).
