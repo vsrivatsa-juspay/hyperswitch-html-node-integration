@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-const hyperswitch = require("@juspay-tech/hyperswitch-node")('snd_c691ade6995743bd88c166ba509ff5da');
+const hyperswitch = require("@juspay-tech/hyperswitch-node")('YOUR_API_KEY');
 
 app.use(express.static("public"));
 app.use(express.json());
