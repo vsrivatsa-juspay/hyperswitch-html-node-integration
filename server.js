@@ -19,7 +19,7 @@ app.post("/create-payment", async (req, res) => {
   */
 
   const hyperswitch_url = "https://sandbox.hyperswitch.io/payments";
-  const hyperswitch_api_key = "snd_c691ade6995743bd88c166ba509ff5da"; // Replace with your actual API key provided by Hyperswitch
+  const hyperswitch_api_key = "HYPERSWITCH_API_KEY"; // Replace with your actual API key provided by Hyperswitch
 
   const payload = {
     amount: calculateOrderAmount(items),
