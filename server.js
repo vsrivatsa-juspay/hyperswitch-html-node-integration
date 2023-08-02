@@ -45,7 +45,7 @@ app.post("/create-payment", async (req, res) => {
     });
   } catch (error) {
     res.send({
-      error: error.message || "Unknown error occurred.",
+      error: error.message || "Unknown error occurred",
     });
   }
 });
