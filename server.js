@@ -28,7 +28,7 @@ app.post("/create-payment", async (req, res) => {
 
   const headers = {
     "Content-Type": "application/json",
-    Accept: "application/json",
+    "Accept": "application/json",
     "api-key": hyperswitch_api_key,
   };
 
