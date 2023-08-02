@@ -29,7 +29,7 @@ npm install
 
 3. Run the server :
 ~~~
-npm start
+npm run start
 ~~~
 
 4. The sample app will now be accessible here : [http://localhost:4242/index.html](http://localhost:4242/index.html).

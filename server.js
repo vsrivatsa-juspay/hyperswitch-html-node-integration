@@ -1,17 +1,14 @@
 const express = require("express");
 const app = express();
 
-const hyperswitch = require("@juspay-tech/hyperswitch-node")('HYPERSWITCH_API_KEY');
-
 app.use(express.static("public"));
 app.use(express.json());
 
 const calculateOrderAmount = (items) => {
-  return 1345;
+  return 1400;
 };
 
 app.post("/create-payment", async (req, res) => {
-
   const { items } = req.body;
 
   /*
@@ -21,14 +18,36 @@ app.post("/create-payment", async (req, res) => {
      https://api-reference.hyperswitch.io/docs/hyperswitch-api-reference/60bae82472db8-payments-create
   */
 
-  const paymentIntent = await hyperswitch.paymentIntents.create({
+  const hyperswitch_url = "https://sandbox.hyperswitch.io/payments";
+  const hyperswitch_api_key = "HYPERSWITCH_API_KEY"; // Replace with your actual API key provided by Hyperswitch
+
+  const payload = {
     amount: calculateOrderAmount(items),
     currency: "USD",
-  });
+  };
 
-  res.send({
-    client_secret: paymentIntent.client_secret,
-  });
+  const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "api-key": hyperswitch_api_key,
+  };
+
+  try {
+    const response = await fetch(hyperswitch_url, {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+    res.send({
+      client_secret: data.client_secret,
+    });
+  } catch (error) {
+    res.send({
+      error: error.message || "Unknown error occurred",
+    });
+  }
 });
 
 app.listen(4242, () => console.log("Node server listening on port 4242!"));
